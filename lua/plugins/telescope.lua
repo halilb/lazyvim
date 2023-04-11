@@ -1,3 +1,5 @@
+local Util = require("lazyvim.util")
+
 return {
   "nvim-telescope/telescope.nvim",
   opts = {
@@ -20,6 +22,7 @@ return {
       end,
       desc = "Buffers",
     },
+    { "<leader>a", Util.telescope("live_grep"), desc = "Find in Files (Grep)" },
     {
       "C-j",
       function()
